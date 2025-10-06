@@ -132,20 +132,20 @@ require("vague").setup({
 
 ## Overwriting highlights
 
-You can use the `on_highlight` config option to add new or change existing
-highlight groups. The second argument is the `colors` table defined in the
-config. The overwritten `highlights` object is then used internally to set up
-all highlights (Lua tables are passed to functions by reference).
+You can modify or extend highlight groups using the `on_highlights` configuration option.
+The first argument is a table of all current highlight definitions that can be directly modified.
+The second argument provides the color values defined in the config. Any changes made to the
+first table take effect when highlights are applied.
 
 ```lua
-on_highlights = function(highlights, colors)
+on_highlights = function(hl, c)
   -- available options: fg, bg, gui, sp
-  highlights.NewHighlight = { fg = colors.fg, bg = colors.bg, gui = "bold" }
-  highlights.ExistingHighlight.fg = colors.delta -- only overwrite fg
+  hl.NewHighlight = { fg = c.fg, bg = c.bg, gui = "bold" }
+  hl.ExistingHighlight.fg = c.delta -- only overwrite fg
 end
 ```
 
-## Explicitly Supported plugins
+## Explicitly supported plugins
 
 - [Blink-cmp](https://github.com/Saghen/blink.cmp)
 - [Cmp](https://github.com/hrsh7th/nvim-cmp)
@@ -160,7 +160,7 @@ end
 - [Treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 - [Snacks](https://github.com/folke/snacks.nvim)
 - [Rainbow delimiters](https://github.com/hiphish/rainbow-delimiters.nvim)
-- [Mini](https://github.com/echasnovski/mini.nvim)
+- [Mini](https://github.com/nvim-mini/mini.nvim)
 - [Vim-better-whitespace](https://github.com/ntpeters/vim-better-whitespace)
 - [Fzf-lua](https://github.com/ibhagwan/fzf-lua)
 
