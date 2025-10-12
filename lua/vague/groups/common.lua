@@ -43,6 +43,7 @@ M.get_colors = function(conf)
     PmenuSel         = { fg = c.constant, bg = c.line },
     PmenuSbar        = { bg = c.bg },
     PmenuThumb       = { bg = c.comment },
+    PmenuBorder      = { fg = c.floatBorder },
     Question         = { fg = c.constant },
     QuickFixLine     = { fg = c.func, gui = "underline" },
     Search           = { fg = c.fg, bg = c.search or c.visual },
