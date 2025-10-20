@@ -17,7 +17,6 @@ M.get_colors = function(conf)
     ["@character.special"]     = syntax["SpecialChar"],                                  -- special characters
     ["@constant"]              = syntax["Constant"],                                     -- constants
     ["@constant.builtin"]      = { fg = c.number, gui = conf.style.builtin_constants },  -- constants defined by the language, like 'nil' in Lua
-    ["@constant.macro"]        = syntax["Macro"],                                        -- constants defined by macros, like 'NULL' in C
     ["@constructor"]           = { fg = c.constant, gui = conf.style.functions },        -- constructor calls and definitions
     ["@constructor.lua"]       = { fg = c.type, gui = conf.style.functions },            -- constructor calls and definitions, `= { }` in Lua
     ["@text.diff.add"]         = diff["DiffAdd"],
@@ -29,7 +28,6 @@ M.get_colors = function(conf)
     ["@function.builtin"]      = { fg = c.func, gui = conf.style.builtin_functions },    -- built-in functions
     ["@function.call"]         = { fg = c.parameter },                                   -- function calls
     ["@function.macro"]        = syntax["Macro"],                                        -- macro-defined functions
-    ["@function.method"]       = { fg = c.func },                                        -- methods
     ["@function.method.call"]  = { fg = c.type },                                        -- method calls
     ["@keyword"]               = { fg = c.keyword, gui = conf.style.keywords },          -- general keywords
     ["@keyword.conditional"]   = { fg = c.keyword, gui = conf.style.conditionals },      -- conditional keywords
@@ -44,8 +42,6 @@ M.get_colors = function(conf)
     ["@markup.link"]           = { fg = c.string },                                      -- text references, footnotes, citations, etc.
     ["@markup.link.uri"]       = { fg = c.string, gui = "underline" },                   -- URLs, links, emails
     ["@markup.list"]           = { fg = c.func },                                        -- lists
-    ["@markup.list.checked"]   = { fg = c.func },                                        -- checked todo list items
-    ["@markup.list.unchecked"] = { fg = c.func },                                        -- unchecked todo list items
     ["@markup.math"]           = { fg = c.string },                                      -- math environments, like `$$` in LaTeX
     ["@markup.quote.markdown"] = { fg = c.comment },                                     -- quotes with '>'
     ["@markup.raw"]            = { fg = c.constant },                                    -- inline code in markdown
@@ -57,8 +53,6 @@ M.get_colors = function(conf)
     ["@number.float"]          = syntax["Float"],                                        -- floats
     ["@operator"]              = syntax["Operator"],                                     -- operators like `+`
     ["@property"]              = { fg = c.property },                                    -- properties (similar to TSField)
-    ["@punctuation.bracket"]   = { fg = c.fg },                                          -- brackets and parentheses
-    ["@punctuation.delimiter"] = { fg = c.fg },                                          -- delimiters, like `; . , `
     ["@punctuation.special"]   = syntax["SpecialChar"],                                  -- special punctuation (e.g., `{}` in string interpolation)
     ["@string"]                = syntax["String"],                                       -- strings
     ["@string.escape"]         = syntax["SpecialChar"],                                  -- escape characters within strings
