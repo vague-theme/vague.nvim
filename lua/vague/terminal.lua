@@ -18,6 +18,6 @@ M.set_highlights = function()
   vim.g.terminal_color_12 = "#8ba9c1" -- blue
   vim.g.terminal_color_13 = "#c9b1ca" -- purple
   vim.g.terminal_color_14 = "#bebeda" -- cyan
-  vim.g.terminal_color_15 = c.fg -- white
+  vim.g.terminal_color_15 = "#d7d7d7" -- white
 end
 return M
