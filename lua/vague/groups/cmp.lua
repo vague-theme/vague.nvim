@@ -10,8 +10,8 @@ M.get_colors = function(conf)
   -- stylua: ignore
   local hl = {
     CmpGhostText          = { fg = c.comment },                                   -- ghost text for completion
-    CmpItemAbbr           = { fg = c.fg, bg = "none" },                           -- abbreviation in completion menu
-    CmpItemAbbrDeprecated = { fg = c.error, bg = "none", strikethrough = true },  -- deprecated items in completion menu
+    CmpItemAbbr           = { fg = c.fg },                                        -- abbreviation in completion menu
+    CmpItemAbbrDeprecated = { fg = c.error, strikethrough = true },               -- deprecated items in completion menu
     CmpItemAbbrMatch      = { fg = c.delta, gui = conf.plugins.cmp.match },       -- matched text in completion menu
     CmpItemAbbrMatchFuzzy = { fg = c.delta, gui = conf.plugins.cmp.match_fuzzy }, -- fuzzy-matched text in completion menu
     CmpItemMenu           = common["Pmenu"],                                      -- menu for completion items
