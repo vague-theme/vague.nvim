@@ -64,6 +64,8 @@ M.get_colors = function(conf)
     Whitespace       = { fg = c.comment },
     WildMenu         = { fg = c.bg, bg = c.func },
     WinSeparator     = { fg = c.floatBorder },
+    WinBar           = { fg = c.fg, bg = c.inactiveBg },
+    WinBarNC         = { fg = c.comment },
   }
 
   return hl
