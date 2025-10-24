@@ -61,7 +61,7 @@ M.get_colors = function(conf)
     Visual           = { bg = c.visual },
     VisualNOS        = { bg = c.comment, gui = "underline" },
     WarningMsg       = { fg = c.warning, gui = "bold" },
-    Whitespace       = { fg = c.comment },
+    Whitespace       = { fg = c.line },
     WildMenu         = { fg = c.bg, bg = c.func },
     WinSeparator     = { fg = c.floatBorder },
     WinBar           = { fg = c.fg, bg = c.inactiveBg },
