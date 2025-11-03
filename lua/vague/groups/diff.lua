@@ -14,7 +14,7 @@ M.get_colors = function(conf)
     DiffAdd       = { bg = utilities.blend(c.plus, c.bg, 0.2) },
     DiffChange    = { bg = utilities.blend(c.delta, c.bg, 0.2) },
     DiffDelete    = { bg = utilities.blend(c.error, c.bg, 0.2) },
-    DiffText      = { fg = c.fg },
+    DiffText      = { bg = utilities.blend(c.delta, c.bg, 0.4) },
     DiffFile      = { fg = c.keyword },
     DiffIndexLine = { fg = c.comment },
   }
