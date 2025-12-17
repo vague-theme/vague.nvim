@@ -10,6 +10,7 @@ return {
   dashboard = init("dashboard"),
   diff = init("diff"),
   fzf_lua = init("fzf-lua"),
+  html = init("html"),
   lsp_native = init("lsp-native"),
   lsp_plugin = init("lsp-plugin"),
   mini = init("mini"),
