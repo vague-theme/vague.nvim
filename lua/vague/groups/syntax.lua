@@ -14,7 +14,7 @@ M.get_colors = function(conf)
     Constant        = { fg = c.constant },                                     -- (preferred) any constant
     Define          = { fg = c.comment },                                      -- preprocessor '#define'
     Delimiter       = { fg = c.fg },                                           -- delimiter characters
-    Error           = { fg = c.error, gui = conf.style.error },                -- (preferred) any erroneous construct
+    Error           = { bg = c.error, gui = conf.style.error },                -- (preferred) any erroneous construct
     Exception       = { fg = c.keyword, gui = conf.style.keywords_exception }, -- 'try', 'catch', 'throw'
     Float           = { fg = c.number, gui = conf.style.float },               -- float constants
     Function        = { fg = c.func, gui = conf.style.functions },             -- functions

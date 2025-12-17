@@ -12,8 +12,6 @@ M.get_colors = function(conf)
     MiniDiffSignChange  = { fg = c.delta },
     MiniDiffSignDelete  = { fg = c.error },
 
-    MiniTrailspace      = { bg = c.error },
-
     MiniStatuslineModeNormal  = { fg = c.bg, bg = c.operator, gui = "bold" },
     MiniStatuslineModeInsert  = { fg = c.bg, bg = c.delta, gui = "bold" },
     MiniStatuslineModeVisual  = { fg = c.bg, bg = c.builtin, gui = "bold" },
