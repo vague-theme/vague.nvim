@@ -14,6 +14,7 @@ return {
   lsp_native = init("lsp-native"),
   lsp_plugin = init("lsp-plugin"),
   mini = init("mini"),
+  modes = init("modes"),
   neotest = init("neotest"),
   neotree = init("neotree"),
   netrw = init("netrw"),
