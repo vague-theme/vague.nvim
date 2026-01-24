@@ -27,7 +27,6 @@ M.get_colors = function(conf)
     ["@lsp.type.selfParameter"]              = syntax["Special"],                    -- self parameters
     ["@lsp.type.typeParameter"]              = syntax["Typedef"],                    -- type parameters
     ["@lsp.type.variable"]                   = treesitter["@constant"],              -- variables
-    ["@lsp.typemod.function"]                = treesitter["@function.call"],         -- function calls
     ["@lsp.typemod.function.builtin"]        = treesitter["@function.builtin"],      -- built-in functions
     ["@lsp.typemod.function.defaultLibrary"] = treesitter["@function.builtin"],      -- default library functions
     ["@lsp.typemod.function.definition"]     = treesitter["@function"],              -- function definitions
