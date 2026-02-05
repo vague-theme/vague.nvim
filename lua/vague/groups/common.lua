@@ -57,8 +57,6 @@ M.get_colors = function(conf)
     TabLine            = { fg = c.fg, bg = c.line },
     TabLineFill        = { fg = c.comment, bg = c.line },
     TabLineSel         = { fg = c.bg, bg = c.fg },
-    ToolbarButton      = { fg = c.bg, bg = c.visual },
-    ToolbarLine        = { fg = c.fg },
     Visual             = { bg = c.visual },
     VisualNOS          = { bg = c.comment, gui = "underline" },
     WarningMsg         = { fg = c.warning, gui = "bold" },
