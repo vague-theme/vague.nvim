@@ -10,16 +10,14 @@ local function set_vim_highlights(highlights)
     elseif setting.gui == "italic" and not curr_internal_conf.italic then
       setting.gui = "none"
     end
-    vim.api.nvim_command(
-      string.format(
-        "highlight %s guifg=%s guibg=%s guisp=%s gui=%s",
-        name,
-        setting.fg or "none",
-        setting.bg or "none",
-        setting.sp or "none",
-        setting.gui or "none"
-      )
-    )
+
+    vim.api.nvim_set_hl(0, name, {
+      fg = setting.fg,
+      bg = setting.bg,
+      sp = setting.sp,
+      bold = setting.gui == "bold",
+      italic = setting.gui == "italic",
+    })
   end
 end
 
