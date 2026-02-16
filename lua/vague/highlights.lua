@@ -17,6 +17,15 @@ local function set_vim_highlights(highlights)
       sp = setting.sp,
       bold = setting.gui == "bold",
       italic = setting.gui == "italic",
+      standout = setting.gui == "standout",
+      underline = setting.gui == "underline",
+      undercurl = setting.gui == "undercurl",
+      underdouble = setting.gui == "underdouble",
+      underdotted = setting.gui == "underdotted",
+      underdashed = setting.gui == "underdashed",
+      strikethrough = setting.gui == "strikethrough",
+      reverse = setting.gui == "reverse",
+      nocombine = setting.gui == "nocombine",
     })
   end
 end
