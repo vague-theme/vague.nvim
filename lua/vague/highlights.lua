@@ -5,7 +5,7 @@ local M = {}
 ---@param highlights table<string, table>
 local function set_vim_highlights(highlights)
   for name, setting in pairs(highlights) do
-    local style_string = setting.gui or ""
+    local style_string = setting.gui or setting.fmt or ""
 
     if not curr_internal_conf.bold then style_string = style_string:gsub("bold", "") end
     if not curr_internal_conf.italic then style_string = style_string:gsub("italic", "") end
