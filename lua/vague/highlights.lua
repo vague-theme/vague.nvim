@@ -2,10 +2,10 @@ local curr_internal_conf = require("vague.config.internal").current
 local groups = require("vague.groups")
 local M = {}
 
----@param highlights table<string, table>
+---@param highlights table<string, table<string, string|boolean>>
 local function set_vim_highlights(highlights)
   for name, setting in pairs(highlights) do
-    local style_string = setting.gui or setting.fmt or ""
+    local style_string = setting.gui or setting.fmt or "" --[[@as string]]
     -- Clear not supported in nvim_set_hl() options
     setting.gui = nil
     setting.fmt = nil
