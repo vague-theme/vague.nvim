@@ -2,30 +2,36 @@ local curr_internal_conf = require("vague.config.internal").current
 local groups = require("vague.groups")
 local M = {}
 
----@param highlights table <string, table>
+---@param highlights table<string, table>
 local function set_vim_highlights(highlights)
   for name, setting in pairs(highlights) do
-    if setting.gui == "bold" and not curr_internal_conf.bold then
-      setting.gui = "none"
-    elseif setting.gui == "italic" and not curr_internal_conf.italic then
-      setting.gui = "none"
+    local style_string = setting.gui or ""
+
+    if not curr_internal_conf.bold then style_string = style_string:gsub("bold", "") end
+    if not curr_internal_conf.italic then style_string = style_string:gsub("italic", "") end
+
+    local parsed = {}
+    -- we do this to avoid strings like ",italic" from being inserted
+    for style in style_string:gmatch("([^,]+)") do
+      parsed[style] = true
     end
 
     vim.api.nvim_set_hl(0, name, {
       fg = setting.fg,
       bg = setting.bg,
       sp = setting.sp,
-      bold = setting.gui == "bold",
-      italic = setting.gui == "italic",
-      standout = setting.gui == "standout",
-      underline = setting.gui == "underline",
-      undercurl = setting.gui == "undercurl",
-      underdouble = setting.gui == "underdouble",
-      underdotted = setting.gui == "underdotted",
-      underdashed = setting.gui == "underdashed",
-      strikethrough = setting.gui == "strikethrough",
-      reverse = setting.gui == "reverse",
-      nocombine = setting.gui == "nocombine",
+      -- options will be nil if not defined somewhere so always default to false
+      bold = parsed.bold or false,
+      italic = parsed.italic or false,
+      standout = parsed.standout or false,
+      underline = parsed.underline or false,
+      undercurl = parsed.undercurl or false,
+      underdouble = parsed.underdouble or false,
+      underdotted = parsed.underdotted or false,
+      underdashed = parsed.underdashed or false,
+      strikethrough = parsed.strikethrough or false,
+      reverse = parsed.reverse or false,
+      nocombine = parsed.nocombine or false,
     })
   end
 end
