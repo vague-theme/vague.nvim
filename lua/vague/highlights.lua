@@ -29,7 +29,7 @@ local function set_vim_highlights(highlights)
       underdouble = parsed.underdouble or false,
       underdotted = parsed.underdotted or false,
       underdashed = parsed.underdashed or false,
-      strikethrough = parsed.strikethrough or false,
+      strikethrough = parsed.strikethrough or setting.strikethrough or false,
       reverse = parsed.reverse or false,
       nocombine = parsed.nocombine or false,
     })
