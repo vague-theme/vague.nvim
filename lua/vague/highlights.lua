@@ -7,9 +7,6 @@ local function set_vim_highlights(highlights)
   for name, setting in pairs(highlights) do
     local style_string = setting.gui or setting.fmt or ""
 
-    if not curr_internal_conf.bold then style_string = style_string:gsub("bold", "") end
-    if not curr_internal_conf.italic then style_string = style_string:gsub("italic", "") end
-
     local parsed = {}
     -- we do this to avoid strings like ",italic" from being inserted
     for style in style_string:gmatch("([^,]+)") do
@@ -20,8 +17,8 @@ local function set_vim_highlights(highlights)
       fg = setting.fg,
       bg = setting.bg,
       sp = setting.sp,
-      bold = parsed.bold,
-      italic = parsed.italic,
+      bold = curr_internal_conf.bold and parsed.bold,
+      italic = curr_internal_conf.italic and parsed.italic,
       standout = parsed.standout,
       underline = parsed.underline,
       undercurl = parsed.undercurl,
