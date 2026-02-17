@@ -55,7 +55,6 @@ M.get_colors = function(conf)
     StatusLineTermNC   = { fg = c.comment },
     Substitute         = { fg = c.type, bg = c.visual },
     TabLine            = conf.transparent and { fg = c.comment } or { bg = c.inactiveBg },
-    TabLineFill        = conf.transparent and {} or { bg = c.inactiveBg },
     TabLineSel         = conf.transparent and {} or { fg = c.inactiveBg, bg = c.fg },
     Visual             = { bg = c.visual },
     VisualNOS          = { bg = c.comment, underline = true },
