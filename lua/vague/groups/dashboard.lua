@@ -10,7 +10,7 @@ M.get_colors = function(conf)
     DashboardShortCut = { fg = c.parameter },
     DashboardHeader   = { fg = c.constant },
     DashboardCenter   = { fg = c.constant },
-    DashboardFooter   = { fg = c.delta, gui = conf.plugins.dashboard.footer},
+    DashboardFooter   = { fg = c.delta, italic = conf.italic },
   }
 
   return hl
