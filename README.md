@@ -139,8 +139,8 @@ first table take effect when highlights are applied.
 
 ```lua
 on_highlights = function(hl, c)
-  -- available options: fg, bg, gui, sp
-  hl.NewHighlight = { fg = c.fg, bg = c.bg, gui = "bold" }
+  -- for available options check out neovim's documentation on nvim_set_hl
+  hl.NewHighlight = { fg = c.fg, bg = c.bg, bold = true }
   hl.ExistingHighlight.fg = c.delta -- only overwrite fg
 end
 ```
