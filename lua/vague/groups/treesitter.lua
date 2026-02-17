@@ -38,16 +38,16 @@ M.get_colors = function(conf)
     ["@label"]                 = syntax["Label"],                                        -- labels
     ["@markup"]                = { fg = c.fg },                                          -- text in markup languages
     ["@markup.heading"]        = { fg = c.keyword, gui = conf.style.headings },          -- markdown titles
-    ["@markup.italic"]         = { fg = c.fg, gui = "italic" },                          -- italic text
+    ["@markup.italic"]         = { fg = c.fg, italic = conf.italic },                          -- italic text
     ["@markup.link"]           = { fg = c.string },                                      -- text references, footnotes, citations, etc.
-    ["@markup.link.uri"]       = { fg = c.string, gui = "underline" },                   -- URLs, links, emails
+    ["@markup.link.uri"]       = { fg = c.string, underline = true },                   -- URLs, links, emails
     ["@markup.list"]           = { fg = c.func },                                        -- lists
     ["@markup.math"]           = { fg = c.string },                                      -- math environments, like `$$` in LaTeX
     ["@markup.quote.markdown"] = { fg = c.comment },                                     -- quotes with '>'
     ["@markup.raw"]            = { fg = c.constant },                                    -- inline code in markdown
-    ["@markup.strikethrough"]  = { fg = c.comment, gui = "strikethrough" },              -- strikethrough text
-    ["@markup.strong"]         = { fg = c.fg, gui = "bold" },                            -- bold text
-    ["@markup.underline"]      = { fg = c.fg, gui = "underline" },                       -- underlined text
+    ["@markup.strikethrough"]  = { fg = c.comment, strikethrough = true },              -- strikethrough text
+    ["@markup.strong"]         = { fg = c.fg, bold = conf.bold },                            -- bold text
+    ["@markup.underline"]      = { fg = c.fg, underline = true },                       -- underlined text
     ["@module"]                = syntax["Constant"],                                     -- modules and namespaces
     ["@number"]                = syntax["Number"],                                       -- all numbers
     ["@number.float"]          = syntax["Float"],                                        -- floats
