@@ -17,28 +17,6 @@
 
 ---@alias CodeStyle "none"|"italic"|"bold"
 
----@class VagueColorscheme.style
----@field boolean? CodeStyle
----@field number? CodeStyle -- number constants
----@field float? CodeStyle -- floating point numbers
----@field error? CodeStyle -- any erroneous construct
----@field comments? CodeStyle
----@field conditionals? CodeStyle
----@field functions? CodeStyle -- function name
----@field headings? CodeStyle -- markdown headings
----@field operators? CodeStyle -- like "+"
----@field strings? CodeStyle
----@field variables? CodeStyle
----@field keywords? CodeStyle
----@field keyword_return? CodeStyle
----@field keywords_loop? CodeStyle -- "for", "while", etc
----@field keywords_label? CodeStyle -- "default", "case", etc
----@field keywords_exception? CodeStyle -- "try", "catch", etc
----@field builtin_constants? CodeStyle -- like "nil" in lua and golang
----@field builtin_functions? CodeStyle -- like "nil" in lua and golang
----@field builtin_types? CodeStyle -- like "nil" in lua and golang
----@field builtin_variables? CodeStyle -- like "this", "self"
-
 ---@class VagueColorscheme.colors
 ---@field bg? string
 ---@field inactiveBg? string
@@ -68,7 +46,6 @@
 ---@field transparent? boolean
 ---@field bold? boolean
 ---@field italic? boolean
----@field style? VagueColorscheme.style
 ---@field colors? VagueColorscheme.colors
 ---@field on_highlights? fun(highlights: table<string, vim.api.keyset.highlight>, colors: VagueColorscheme.InternalConfig.colors)
 

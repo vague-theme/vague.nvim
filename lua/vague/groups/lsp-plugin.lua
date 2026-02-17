@@ -22,7 +22,7 @@ M.get_colors = function(conf)
     DiagnosticVirtualTextOk       = { fg = c.plus },                                          -- virtual text for ok
     DiagnosticVirtualTextWarn     = { fg = c.warning, bold = conf.bold },                     -- virtual text for warnings
     DiagnosticWarn                = { fg = c.warning, bold = conf.bold },                     -- diagnostic warning
-    LspCodeLens                   = { fg = c.comment, gui = conf.style.comments },            -- code lens text
+    LspCodeLens                   = { fg = c.comment, italic = conf.italic },                 -- code lens text
     LspCodeLensSeparator          = { fg = c.comment },                                       -- code lens separator
     LspCxxHlGroupEnumConstant     = { fg = c.type },                                          -- C++ enum constants
     LspCxxHlGroupMemberVariable   = { fg = c.type },                                          -- C++ member variables
