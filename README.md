@@ -72,31 +72,6 @@ require("vague").setup({
     builtin_types = "bold",
     builtin_variables = "none",
   },
-  -- plugin styles where applicable
-  -- make an issue/pr if you'd like to see more styling options!
-  plugins = {
-    cmp = {
-      match = "bold",
-      match_fuzzy = "bold",
-    },
-    dashboard = {
-      footer = "italic",
-    },
-    lsp = {
-      diagnostic_error = "bold",
-      diagnostic_hint = "none",
-      diagnostic_info = "italic",
-      diagnostic_ok = "none",
-      diagnostic_warn = "bold",
-    },
-    neotest = {
-      focused = "bold",
-      adapter_name = "bold",
-    },
-    telescope = {
-      match = "bold",
-    },
-  },
 
   -- Override highlights or add new highlights
   on_highlights = function(highlights, colors) end,
