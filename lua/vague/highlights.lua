@@ -11,9 +11,7 @@ M.set_highlights = function()
   end
 
   -- Allow user to add or override any highlight groups
-  local overrides = {}
-  curr_internal_conf.on_highlights(overrides, curr_internal_conf.colors)
-  highlights = vim.tbl_deep_extend("force", highlights, overrides)
+  curr_internal_conf.on_highlights(highlights, curr_internal_conf.colors)
 
   for hl, settings in pairs(highlights) do
     vim.api.nvim_set_hl(0, hl, settings)
