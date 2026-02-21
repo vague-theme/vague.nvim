@@ -41,8 +41,9 @@ vim.cmd("colorscheme vague")
 
 ```lua
 require("vague").setup({
-  transparent = false, -- don't set background
-  -- disable bold/italic globally
+  -- Don't set background
+  transparent = false,
+  -- Disable bold/italic globally
   bold = true,
   italic = true,
 
@@ -86,10 +87,10 @@ The second argument provides the color values defined in the config. Any changes
 first table take effect when highlights are applied.
 
 ```lua
-on_highlights = function(hl, c)
-  -- for available options check out neovim's documentation on nvim_set_hl
-  hl.NewHighlight = { fg = c.fg, bg = c.bg, bold = true }
-  hl.ExistingHighlight.fg = c.delta -- only overwrite fg
+on_highlights = function(hl, colors)
+  -- For available options see `:h nvim_set_hl()`
+  hl.NewHighlight = { fg = colors.fg, bg = colors.bg, bold = true }
+  hl.ExistingHighlight.fg = colors.delta -- only overwrite fg
 end
 ```
 
@@ -116,4 +117,3 @@ end
 ## Extras
 
 Extra color configs for other tools can be found in [GitHub organization](https://github.com/vague-theme).
-
