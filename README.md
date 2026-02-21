@@ -41,62 +41,11 @@ vim.cmd("colorscheme vague")
 
 ```lua
 require("vague").setup({
-  transparent = false, -- don't set background
-  -- disable bold/italic globally in `style`
+  -- Don't set background
+  transparent = false,
+  -- Disable bold/italic globally
   bold = true,
   italic = true,
-  style = {
-    -- "none" is the same thing as default. But "italic" and "bold" are also valid options
-    boolean = "bold",
-    number = "none",
-    float = "none",
-    error = "bold",
-    comments = "italic",
-    conditionals = "none",
-    functions = "none",
-    headings = "bold",
-    operators = "none",
-    strings = "italic",
-    variables = "none",
-
-    -- keywords
-    keywords = "none",
-    keyword_return = "italic",
-    keywords_loop = "none",
-    keywords_label = "none",
-    keywords_exception = "none",
-
-    -- builtin
-    builtin_constants = "bold",
-    builtin_functions = "none",
-    builtin_types = "bold",
-    builtin_variables = "none",
-  },
-  -- plugin styles where applicable
-  -- make an issue/pr if you'd like to see more styling options!
-  plugins = {
-    cmp = {
-      match = "bold",
-      match_fuzzy = "bold",
-    },
-    dashboard = {
-      footer = "italic",
-    },
-    lsp = {
-      diagnostic_error = "bold",
-      diagnostic_hint = "none",
-      diagnostic_info = "italic",
-      diagnostic_ok = "none",
-      diagnostic_warn = "bold",
-    },
-    neotest = {
-      focused = "bold",
-      adapter_name = "bold",
-    },
-    telescope = {
-      match = "bold",
-    },
-  },
 
   -- Override highlights or add new highlights
   on_highlights = function(highlights, colors) end,
@@ -138,10 +87,10 @@ The second argument provides the color values defined in the config. Any changes
 first table take effect when highlights are applied.
 
 ```lua
-on_highlights = function(hl, c)
-  -- available options: fg, bg, gui, sp
-  hl.NewHighlight = { fg = c.fg, bg = c.bg, gui = "bold" }
-  hl.ExistingHighlight.fg = c.delta -- only overwrite fg
+on_highlights = function(hl, colors)
+  -- For available options see `:h nvim_set_hl()`
+  hl.NewHighlight = { fg = colors.fg, bg = colors.bg, bold = true }
+  hl.ExistingHighlight.fg = colors.delta -- only overwrite fg
 end
 ```
 
@@ -168,4 +117,3 @@ end
 ## Extras
 
 Extra color configs for other tools can be found in [GitHub organization](https://github.com/vague-theme).
-
