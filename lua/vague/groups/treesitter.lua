@@ -39,8 +39,9 @@ M.get_colors = function(conf)
     ["@markup"]                = { fg = c.fg },                                          -- text in markup languages
     ["@markup.heading"]        = { fg = c.keyword, bold = conf.bold },                   -- markdown titles
     ["@markup.italic"]         = { fg = c.fg, italic = conf.italic },                    -- italic text
-    ["@markup.link"]           = { fg = c.string },                                      -- text references, footnotes, citations, etc.
-    ["@markup.link.uri"]       = { fg = c.string, underline = true },                    -- URLs, links, emails
+    ["@markup.link"]           = {},                                                     -- text references, footnotes, citations, etc.
+    ["@markup.link.label"]     = { fg = c.string, underline = true },                    -- link labels
+    ["@markup.link.url"]       = { fg = c.func },                                        -- URLs, links, emails
     ["@markup.list"]           = { fg = c.func },                                        -- lists
     ["@markup.math"]           = { fg = c.string },                                      -- math environments, like `$$` in LaTeX
     ["@markup.quote.markdown"] = { fg = c.comment },                                     -- quotes with '>'
