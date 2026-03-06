@@ -19,7 +19,6 @@ return {
   neotree = init("neotree"),
   netrw = init("netrw"),
   rainbow_delimiters = init("rainbow-delimiters"),
-  snacks_indent = init("snacks-indent"),
   snacks_input = init("snacks-input"),
   snacks_picker = init("snacks-picker"),
   syntax = init("syntax"),
