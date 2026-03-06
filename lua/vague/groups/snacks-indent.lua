@@ -9,7 +9,6 @@ M.get_colors = function(conf)
   local hl = {
     SnacksIndentChunk = {fg = c.comment},
     SnacksIndent      = {fg = c.comment},
-    SnacksIndentScope = {fg = c.floatBorder},
   }
 
   return hl
