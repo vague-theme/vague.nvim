@@ -8,13 +8,8 @@ M.get_colors = function(conf)
   -- stylua: ignore
   local hl = {
     BlinkCmpDocBorder            = { fg = c.floatBorder },
-    BlinkCmpGhostText            = { link = "CmpGhostText" },
-    BlinkCmpLabel                = { link = "CmpItemAbbr" },
     BlinkCmpLabelDeprecated      = { link = "CmpItemAbbrDeprecated" },
-    BlinkCmpLabelMatch           = { link = "CmpItemAbbrMatch" },
-    BlinkCmpMenu                 = { link = "CmpItemMenu" },
     BlinkCmpMenuBorder           = { fg = c.floatBorder },
-    BlinkCmpKind                 = { link = "CmpKind" },
     BlinkCmpSignatureHelpBorder  = { fg = c.floatBorder },
   }
 

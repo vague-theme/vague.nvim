@@ -8,7 +8,6 @@ M.get_colors = function(conf)
   -- stylua: ignore
   local hl = {
     NeotestTest             = { fg = c.comment },
-    NeotestUnknown          = { fg = c.fg },
     NeotestDir              = { fg = c.comment },
     NeotestFile             = { fg = c.constant },
     NeotestPassed           = { fg = c.plus},
