@@ -1,22 +1,20 @@
-local cmp_group = require("vague.groups.cmp")
 local M = {}
 
 ---@param conf VagueColorscheme.InternalConfig
 ---@return table
 M.get_colors = function(conf)
   local c = conf.colors
-  local cmp = cmp_group.get_colors(conf)
 
   -- stylua: ignore
   local hl = {
     BlinkCmpDocBorder            = { fg = c.floatBorder },
-    BlinkCmpGhostText            = cmp["CmpGhostText"],
-    BlinkCmpLabel                = cmp["CmpItemAbbr"],
-    BlinkCmpLabelDeprecated      = cmp["CmpItemAbbrDeprecated"],
-    BlinkCmpLabelMatch           = cmp["CmpItemAbbrMatch"],
-    BlinkCmpMenu                 = cmp["CmpItemMenu"],
+    BlinkCmpGhostText            = { link = "CmpGhostText" },
+    BlinkCmpLabel                = { link = "CmpItemAbbr" },
+    BlinkCmpLabelDeprecated      = { link = "CmpItemAbbrDeprecated" },
+    BlinkCmpLabelMatch           = { link = "CmpItemAbbrMatch" },
+    BlinkCmpMenu                 = { link = "CmpItemMenu" },
     BlinkCmpMenuBorder           = { fg = c.floatBorder },
-    BlinkCmpKind                 = cmp["CmpKind"],
+    BlinkCmpKind                 = { link = "CmpKind" },
     BlinkCmpSignatureHelpBorder  = { fg = c.floatBorder },
   }
 

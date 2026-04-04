@@ -1,11 +1,9 @@
-local common_group = require("vague.groups.common")
 local M = {}
 
 ---@param conf VagueColorscheme.InternalConfig
 ---@return table
 M.get_colors = function(conf)
   local c = conf.colors
-  local common = common_group.get_colors(conf)
 
   -- stylua: ignore
   local hl = {
@@ -14,7 +12,7 @@ M.get_colors = function(conf)
     CmpItemAbbrDeprecated = { fg = c.error, strikethrough = true },
     CmpItemAbbrMatch      = { fg = c.delta, bold = conf.bold },
     CmpItemAbbrMatchFuzzy = { fg = c.delta, bold = conf.bold },
-    CmpItemMenu           = common["Pmenu"],
+    CmpItemMenu           = { link = "Pmenu" },
     CmpItemKind           = { fg = c.comment },
   }
 
