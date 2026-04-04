@@ -9,15 +9,15 @@ M.get_colors = function(conf)
 
   -- stylua: ignore
   local hl = {
-    BlinkCmpDocBorder            = { fg = c.floatBorder },       -- border for completion documentation
-    BlinkCmpGhostText            = cmp["CmpGhostText"],          -- ghost text in completion
-    BlinkCmpLabel                = cmp["CmpItemAbbr"],           -- label for completion items
-    BlinkCmpLabelDeprecated      = cmp["CmpItemAbbrDeprecated"], -- deprecated label in completion
-    BlinkCmpLabelMatch           = cmp["CmpItemAbbrMatch"],      -- matched label in completion items
-    BlinkCmpMenu                 = cmp["CmpItemMenu"],           -- menu for completion items
-    BlinkCmpMenuBorder           = { fg = c.floatBorder },       -- border for completion menu
-    BlinkCmpKind                 = cmp["CmpKind"],               -- kind of completion item
-    BlinkCmpSignatureHelpBorder  = { fg = c.floatBorder },       -- border for signature help
+    BlinkCmpDocBorder            = { fg = c.floatBorder },
+    BlinkCmpGhostText            = cmp["CmpGhostText"],
+    BlinkCmpLabel                = cmp["CmpItemAbbr"],
+    BlinkCmpLabelDeprecated      = cmp["CmpItemAbbrDeprecated"],
+    BlinkCmpLabelMatch           = cmp["CmpItemAbbrMatch"],
+    BlinkCmpMenu                 = cmp["CmpItemMenu"],
+    BlinkCmpMenuBorder           = { fg = c.floatBorder },
+    BlinkCmpKind                 = cmp["CmpKind"],
+    BlinkCmpSignatureHelpBorder  = { fg = c.floatBorder },
   }
 
   return hl

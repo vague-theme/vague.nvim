@@ -7,7 +7,7 @@ M.get_colors = function(conf)
 
   -- stylua: ignore
   local hl = {
-    ExtraWhitespace = { fg = c.fg, bg = c.error }, -- Border for Telescope
+    ExtraWhitespace = { fg = c.fg, bg = c.error },
   }
 
   return hl

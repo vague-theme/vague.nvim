@@ -7,21 +7,21 @@ M.get_colors = function(conf)
 
   -- stylua: ignore
   local hl = {
-    NeotestTest             = { fg = c.comment },                                        -- Test status
-    NeotestUnknown          = { fg = c.fg },                                             -- Unknown test status
-    NeotestDir              = { fg = c.comment },                                        -- Directory for tests
-    NeotestFile             = { fg = c.constant },                                       -- Test file
-    NeotestPassed           = { fg = c.plus},                                            -- Passed tests
-    NeotestFailed           = { fg = c.error },                                          -- Failed tests
-    NeotestMarked           = { fg = c.delta },                                          -- Marked tests
-    NeotestWatching         = { fg = c.warning },                                        -- Watching status for tests
-    NeotestTarget           = { fg = c.hint },                                           -- Target test
-    NeotestFocused          = { fg = c.delta, bold = conf.bold },                        -- Focused test
-    NeotestRunning          = { fg = c.hint },                                           -- Running tests
-    NeotestAdapterName      = { fg = c.hint, bold = conf.bold },                         -- Adapter name in tests
-    NeotestNamespace        = { fg = c.parameter },                                      -- Namespace for tests
-    NeotestSkipped          = { fg = c.warning },                                        -- Skipped tests
-    NeotestIndent           = { fg = c.comment },                                        -- Indentation for tests
+    NeotestTest             = { fg = c.comment },
+    NeotestUnknown          = { fg = c.fg },
+    NeotestDir              = { fg = c.comment },
+    NeotestFile             = { fg = c.constant },
+    NeotestPassed           = { fg = c.plus},
+    NeotestFailed           = { fg = c.error },
+    NeotestMarked           = { fg = c.delta },
+    NeotestWatching         = { fg = c.warning },
+    NeotestTarget           = { fg = c.hint },
+    NeotestFocused          = { fg = c.delta, bold = conf.bold },
+    NeotestRunning          = { fg = c.hint },
+    NeotestAdapterName      = { fg = c.hint, bold = conf.bold },
+    NeotestNamespace        = { fg = c.parameter },
+    NeotestSkipped          = { fg = c.warning },
+    NeotestIndent           = { fg = c.comment },
   }
 
   return hl
