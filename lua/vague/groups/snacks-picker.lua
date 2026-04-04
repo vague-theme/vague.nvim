@@ -10,22 +10,22 @@ M.get_colors = function(conf)
 
   -- stylua: ignore
   local hl = {
-    SnacksPickerMatch              = telescope["TelescopeMatching"],     -- Matching text in picker 
-    SnacksPickerPrompt             = telescope["TelescopePromptPrefix"], -- Prefix in picker prompt
-    SnacksPickerBorder             = telescope["TelescopeBorder"],       -- Border for Telescope
-    SnacksPickerBoxBorder          = telescope["TelescopeBorder"],       -- Border for Telescope
-    SnacksPickerListBorder         = telescope["TelescopeBorder"],       -- Border for Telescope
-    SnacksPickerInputBorder        = telescope["TelescopeBorder"],       -- Border for Telescope
-    SnacksPickerPrewviewBorder     = telescope["TelescopeBorder"],       -- Border for Telescope
-    SnacksPickerCursorLine         = telescope["TelescopeSelection"],    -- Selection in picker
-    SnacksPickerBoxCursorLine      = telescope["TelescopeSelection"],    -- Selection in picker
-    SnacksPickerListCursorLine     = telescope["TelescopeSelection"],    -- Selection in picker
-    SnacksPickerInputCursorLine    = telescope["TelescopeSelection"],    -- Selection in picker
-    SnacksPickerPreviewCursorLine  = telescope["TelescopeSelection"],    -- Selection in picker
-    SnacksPickerGitStatusUntracked = neotree["NeoTreeGitUntracked"],     -- color of untracked git items in a picker (usually explorer)
-    SnacksPickerGitStatusAdded     = neotree["NeoTreeGitAdded"],         -- color of added git items in a picker (usually explorer)
-    SnacksPickerGitStatusModified  = neotree["NeoTreeGitModified"],      -- color of modified git items in a picker (usually explorer)
-    SnacksPickerGitStatusStaged    = neotree["NeoTreeGitAdded"],         -- color of added git items in a picker (usually explorer)
+    SnacksPickerMatch              = telescope["TelescopeMatching"],
+    SnacksPickerPrompt             = telescope["TelescopePromptPrefix"],
+    SnacksPickerBorder             = telescope["TelescopeBorder"],
+    SnacksPickerBoxBorder          = telescope["TelescopeBorder"],
+    SnacksPickerListBorder         = telescope["TelescopeBorder"],
+    SnacksPickerInputBorder        = telescope["TelescopeBorder"],
+    SnacksPickerPrewviewBorder     = telescope["TelescopeBorder"],
+    SnacksPickerCursorLine         = telescope["TelescopeSelection"],
+    SnacksPickerBoxCursorLine      = telescope["TelescopeSelection"],
+    SnacksPickerListCursorLine     = telescope["TelescopeSelection"],
+    SnacksPickerInputCursorLine    = telescope["TelescopeSelection"],
+    SnacksPickerPreviewCursorLine  = telescope["TelescopeSelection"],
+    SnacksPickerGitStatusUntracked = neotree["NeoTreeGitUntracked"],
+    SnacksPickerGitStatusAdded     = neotree["NeoTreeGitAdded"],
+    SnacksPickerGitStatusModified  = neotree["NeoTreeGitModified"],
+    SnacksPickerGitStatusStaged    = neotree["NeoTreeGitAdded"],
   }
 
   return hl
