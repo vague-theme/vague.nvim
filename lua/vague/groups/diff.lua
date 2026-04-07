@@ -1,4 +1,3 @@
-local utilities = require("vague.utilities")
 local M = {}
 
 ---@param conf VagueColorscheme.InternalConfig
@@ -11,10 +10,10 @@ M.get_colors = function(conf)
     Added         = { fg = c.plus },
     Changed       = { fg = c.delta },
     Removed       = { fg = c.error },
-    DiffAdd       = { bg = utilities.blend(c.plus, c.bg, 0.2) },
-    DiffChange    = { bg = utilities.blend(c.delta, c.bg, 0.2) },
-    DiffDelete    = { bg = utilities.blend(c.error, c.bg, 0.2) },
-    DiffText      = { bg = utilities.blend(c.delta, c.bg, 0.4) },
+    DiffAdd       = { bg = "#293125" },
+    DiffChange    = { bg = "#41362a" },
+    DiffDelete    = { bg = "#3b242a" },
+    DiffText      = { bg = "#6D583E" },
     DiffFile      = { fg = c.keyword },
     DiffIndexLine = { fg = c.comment },
   }
