@@ -19,7 +19,6 @@ M.get_colors = function(conf)
     Directory          = { fg = c.hint },
     OkMsg              = { fg = c.plus },
     ErrorMsg           = { fg = c.error, bold = conf.bold },
-    EndOfBuffer        = { fg = c.comment },
     FloatTitle         = { link = "NormalFloat" },
     FloatShadow        = { bg = c.visual },
     FloatShadowThrough = { bg = c.visual },
