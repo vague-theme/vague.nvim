@@ -17,13 +17,11 @@ return {
   modes = init("modes"),
   neotest = init("neotest"),
   neotree = init("neotree"),
-  netrw = init("netrw"),
   rainbow_delimiters = init("rainbow-delimiters"),
   snacks_input = init("snacks-input"),
   snacks_picker = init("snacks-picker"),
   syntax = init("syntax"),
   telescope = init("telescope"),
   treesitter = init("treesitter"),
-  treesitter_context = init("treesitter-context"),
   vim_better_whitespace = init("vim-better-whitespace"),
 }
