@@ -7,8 +7,8 @@ M.get_colors = function(conf)
 
   -- stylua: ignore
   local hl = {
-    NeoTreeVertSplit          = { fg = c.comment, bg = conf.transparent and "none" or c.comment },
-    NeoTreeWinSeparator       = { fg = c.comment, bg = conf.transparent and "none" or c.comment },
+    NeoTreeVertSplit          = { fg = c.comment, bg = not conf.transparent and c.comment or nil },
+    NeoTreeWinSeparator       = { fg = c.comment, bg = not conf.transparent and c.comment or nil },
     NeoTreeRootName           = { fg = c.hint, bold = conf.bold },
     NeoTreeGitConflict        = { fg = c.error, bold = conf.bold, italic = conf.italic },
     NeoTreeGitUntracked       = { fg = c.error, italic = conf.italic },
