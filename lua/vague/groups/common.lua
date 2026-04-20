@@ -33,7 +33,7 @@ M.get_colors = function(conf)
     Normal             = { fg = c.fg, bg = not conf.transparent and c.bg or nil },
     NormalFloat        = { fg = c.fg, bg = not conf.transparent and c.inactiveBg or nil },
     ModeMsg            = { fg = c.string },
-    Pmenu              = { fg = c.fg, bg = c.line },
+    Pmenu              = { fg = c.fg, bg = not conf.transparent and c.line or nil },
     PmenuThumb         = { bg = c.comment },
     Question           = { fg = c.constant },
     QuickFixLine       = { bg = c.inactiveBg },
