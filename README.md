@@ -1,7 +1,7 @@
 <div align="center">
   <img height="80" alt="icon" src="https://github.com/vague-theme/vague/blob/main/assets/icon.png?raw=true" />
   <h1>Vague for Neovim</h1>
-  <img alt="Preview" src="https://github.com/user-attachments/assets/8145d76e-3040-4bee-b6bf-3c65140f4786" />
+  <img alt="Preview" src="https://github.com/user-attachments/assets/1952d583-c881-4df4-b999-35fe445f1afc" />
 </div>
 
 ## Installation
