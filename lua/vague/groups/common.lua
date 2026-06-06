@@ -26,7 +26,7 @@ M.get_colors = function(conf)
     FoldColumn         = { fg = c.comment },
     IncSearch          = { fg = c.bg, bg = c.search },
     LineNr             = { fg = c.comment },
-    MatchParen         = { fg = c.fg, bg = c.visual },
+    MatchParen         = { bg = c.visual, bold = true },
     MoreMsg            = { fg = c.func, bold = conf.bold },
     MsgSeparator       = { fg = c.string, bg = not conf.transparent and c.line or nil, bold = conf.bold },
     NonText            = { fg = c.comment },
