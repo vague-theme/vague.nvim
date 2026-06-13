@@ -54,7 +54,7 @@ M.get_colors = function(conf)
     Visual             = { bg = c.visual },
     VisualNOS          = { bg = c.comment, underline = true },
     WarningMsg         = { fg = c.warning, bold = conf.bold },
-    Whitespace         = { fg = c.line },
+    Whitespace         = { fg = c.visual },
     WildMenu           = { fg = c.bg, bg = c.func },
     WinSeparator       = { fg = c.floatBorder },
     WinBar             = { fg = c.fg, bg = c.inactiveBg },
