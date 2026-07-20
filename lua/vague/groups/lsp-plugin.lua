@@ -29,9 +29,6 @@ M.get_colors = function(conf)
     LspCxxHlGroupNamespace        = { fg = c.func },
     LspCxxHlSkippedRegion         = { fg = c.comment },
     LspCxxHlSkippedRegionBeginEnd = { fg = c.operator },
-    LspReferenceRead              = { bg = c.comment },
-    LspReferenceText              = { bg = c.comment },
-    LspReferenceWrite             = { bg = c.comment },
   }
 
   return hl
