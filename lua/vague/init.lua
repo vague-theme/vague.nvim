@@ -18,10 +18,9 @@ end
 --- Under the hood, |:colorscheme| is just using |:highlight GroupName ...| over every highlight group it knows about.
 --- so this function is the equivalent to calling |:colorscheme| so use that instead
 M._colorscheme = function()
-  vim.cmd("highlight clear")
-  if vim.fn.exists("syntax_on") == 1 then
-    vim.cmd("syntax reset")
-  end
+  -- Only clear highlight groups if another colorscheme was already loaded.
+  -- This improves startup time if the colorscheme is loaded in init.lua.
+  if vim.g.colors_name then vim.cmd.highlight("clear") end
   vim.g.colors_name = "vague"
 
   require("vague.highlights").set_highlights()
