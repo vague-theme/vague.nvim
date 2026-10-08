@@ -19,11 +19,6 @@ M.get_colors = function(conf)
     DiagnosticWarn                = { fg = c.warning, bold = conf.bold },
     LspCodeLens                   = { fg = c.comment, italic = conf.italic },
     LspCodeLensSeparator          = { fg = c.comment },
-    LspCxxHlGroupEnumConstant     = { fg = c.type },
-    LspCxxHlGroupMemberVariable   = { fg = c.type },
-    LspCxxHlGroupNamespace        = { fg = c.func },
-    LspCxxHlSkippedRegion         = { fg = c.comment },
-    LspCxxHlSkippedRegionBeginEnd = { fg = c.operator },
   }
 
   return hl
