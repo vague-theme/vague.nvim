@@ -17,6 +17,7 @@ Calling `setup()` is optional.
 
 ```lua
 require('vague').setup({
+  background = 'dark', -- Force 'dark' or 'light'; follows Neovim's 'background' when omitted
   transparent = false, -- If true, background is not set
   bold = true, -- Disable bold globally
   italic = true, -- Disable italic globally
@@ -45,13 +46,24 @@ require('vague').setup({
     search = '#405065',
     plus = '#7fa563',
     delta = '#f3be7c',
+    diffAdd = '#293125',
+    diffChange = '#41362a',
+    diffDelete = '#3b242a',
+    diffText = '#6d583e',
+  },
+  -- Palette used when 'background' is light. Same keys as `colors`.
+  light_colors = {
+    bg = '#f5f5f8',
+    fg = '#34343c',
   },
 })
 ```
 
+The palette follows Neovim's `background` option, so `:set background=light` switches to the light variant and `:set background=dark` switches back. Nvim reloads the colorscheme on its own when that option changes. Setting `background` in `setup()` forces a variant regardless of Neovim's option.
+
 ## Overriding highlights
 
-You can modify or extend highlight groups using the `on_highlights` callback. The first argument is a table of all current highlight definitions that can be directly modified. The second argument provides table of theme colors.
+You can modify or extend highlight groups using the `on_highlights` callback. The first argument is a table of all current highlight definitions that can be directly modified. The second argument provides table of theme colors for the active background.
 
 ```lua
 on_highlights = function(hl, colors)
