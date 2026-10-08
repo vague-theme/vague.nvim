@@ -41,12 +41,18 @@
 ---@field search? string
 ---@field plus? string
 ---@field delta? string
+---@field diffAdd? string
+---@field diffChange? string
+---@field diffDelete? string
+---@field diffText? string
 
 ---@class VagueColorscheme.Config
+---@field background? "dark"|"light" Force a palette variant; defaults to |'background'|.
 ---@field transparent? boolean
 ---@field bold? boolean
 ---@field italic? boolean
----@field colors? VagueColorscheme.colors
+---@field colors? VagueColorscheme.colors Palette used when 'background' is dark.
+---@field light_colors? VagueColorscheme.colors Palette used when 'background' is light.
 ---@field on_highlights? fun(highlights: table<string, vim.api.keyset.highlight>, colors: VagueColorscheme.InternalConfig.colors)
 
 ---@type VagueColorscheme.Config | fun():VagueColorscheme.Config | nil

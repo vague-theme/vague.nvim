@@ -1,27 +1,38 @@
-local curr_internal_conf = require("vague.config.internal").current
+local M = {}
 
----@param group string
-local function init(group) return require("vague.groups." .. group).get_colors(curr_internal_conf) end
-
-return {
-  blink = init("blink"),
-  cmp = init("cmp"),
-  common = init("common"),
-  dashboard = init("dashboard"),
-  diff = init("diff"),
-  fzf_lua = init("fzf-lua"),
-  html = init("html"),
-  lsp_native = init("lsp-native"),
-  lsp_plugin = init("lsp-plugin"),
-  mini = init("mini"),
-  modes = init("modes"),
-  neotest = init("neotest"),
-  neotree = init("neotree"),
-  rainbow_delimiters = init("rainbow-delimiters"),
-  snacks_input = init("snacks-input"),
-  snacks_picker = init("snacks-picker"),
-  syntax = init("syntax"),
-  telescope = init("telescope"),
-  treesitter = init("treesitter"),
-  vim_better_whitespace = init("vim-better-whitespace"),
+local group_modules = {
+  "blink",
+  "cmp",
+  "common",
+  "dashboard",
+  "diff",
+  "fzf-lua",
+  "html",
+  "lsp-native",
+  "lsp-plugin",
+  "mini",
+  "modes",
+  "neotest",
+  "neotree",
+  "rainbow-delimiters",
+  "snacks-input",
+  "snacks-picker",
+  "syntax",
+  "telescope",
+  "treesitter",
+  "vim-better-whitespace",
 }
+
+--- Resolves every group module against the given config. Called at highlight time,
+--- not at require time, so a 'background' switch picks up the right palette.
+---@param conf VagueColorscheme.InternalConfig
+---@return table<string, table<string, vim.api.keyset.highlight>>
+M.get = function(conf)
+  local groups = {}
+  for _, module in ipairs(group_modules) do
+    groups[module] = require("vague.groups." .. module).get_colors(conf)
+  end
+  return groups
+end
+
+return M

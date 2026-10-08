@@ -9,7 +9,7 @@ end
 -- SHOULD BE CALLED AFTER SETUP (unless using default colors)
 M.get_palette = function()
   local palette = {}
-  for name, color in pairs(internal_conf.current.colors) do
+  for name, color in pairs(internal_conf.get().colors) do
     palette[name] = color
   end
   return palette

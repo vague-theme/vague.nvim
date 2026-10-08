@@ -1,8 +1,11 @@
 local M = {}
 
 ---@class VagueColorscheme.InternalConfig
+---@field background? "dark"|"light" Overrides the palette chosen from |'background'| when set.
 local DEFAULT_SETTINGS = {
 
+  ---@type string
+  background = "dark",
   ---@type boolean
   transparent = false,
   ---@type boolean
@@ -62,6 +65,72 @@ local DEFAULT_SETTINGS = {
     plus = "#7fa563",
     ---@type string
     delta = "#f3be7c",
+    ---@type string
+    diffAdd = "#293125",
+    ---@type string
+    diffChange = "#41362a",
+    ---@type string
+    diffDelete = "#3b242a",
+    ---@type string
+    diffText = "#6d583e",
+  },
+
+  ---@class VagueColorscheme.InternalConfig.light_colors
+  light_colors = {
+    ---@type string
+    bg = "#f5f5f8",
+    ---@type string
+    inactiveBg = "#ececf1",
+    ---@type string
+    fg = "#34343c",
+    ---@type string
+    floatBorder = "#8e8e9c",
+    ---@type string
+    line = "#d6d6e1",
+    ---@type string
+    comment = "#82828f",
+    ---@type string
+    builtin = "#346961",
+    ---@type string
+    func = "#bc4e4e",
+    ---@type string
+    string = "#905624",
+    ---@type string
+    number = "#925d25",
+    ---@type string
+    property = "#5e5e93",
+    ---@type string
+    constant = "#5d5db0",
+    ---@type string
+    parameter = "#8c5890",
+    ---@type string
+    visual = "#c8c8d5",
+    ---@type string
+    error = "#cf4161",
+    ---@type string
+    warning = "#845821",
+    ---@type string
+    hint = "#4567d0",
+    ---@type string
+    operator = "#556e8e",
+    ---@type string
+    keyword = "#47789f",
+    ---@type string
+    type = "#496d78",
+    ---@type string
+    search = "#c8d4ec",
+    ---@type string
+    plus = "#567a3d",
+    ---@type string
+    delta = "#845821",
+    ---@type string
+    diffAdd = "#cbefb3",
+    ---@type string
+    diffChange = "#f0d3b2",
+    ---@type string
+    diffDelete = "#efb9c5",
+    ---@type string
+    diffText = "#e6b06f",
   },
 }
 
@@ -72,5 +141,15 @@ local opts = type(vim.g.vague_colorscheme) == "function" and vim.g.vague_colorsc
 
 ---@param user_opts VagueColorscheme.Config
 M.set = function(user_opts) M.current = vim.tbl_deep_extend("force", vim.deepcopy(M.current), user_opts or opts) end
+
+--- Returns a shallow copy of the current config with `colors` pointing at the palette
+--- matching the `background` option, or |'background'| when it isn't set. Nvim reloads
+--- the colorscheme when 'background' changes, so this always reflects the active variant.
+---@return VagueColorscheme.InternalConfig
+M.get = function()
+  local conf = vim.tbl_extend("force", {}, M.current)
+  if (conf.background or vim.o.background) == "light" then conf.colors = M.current.light_colors end
+  return conf
+end
 
 return M
