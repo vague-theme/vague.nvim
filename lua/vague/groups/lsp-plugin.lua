@@ -18,7 +18,6 @@ M.get_colors = function(conf)
     DiagnosticUnderlineWarn       = { sp = c.delta   , undercurl = true, bold = conf.bold },
     DiagnosticWarn                = { fg = c.warning, bold = conf.bold },
     LspCodeLens                   = { fg = c.comment, italic = conf.italic },
-    LspCodeLensSeparator          = { fg = c.comment },
   }
 
   return hl
